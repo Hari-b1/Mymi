@@ -1,0 +1,45 @@
+html{
+    background-color: aliceblue;
+    background-image: url('Stark.png');
+    background-size: auto;
+}
+
+h1 {
+    text-align : center;
+    color : aquamarine
+}
+.container{
+    display :flex;
+    margin :auto;
+    padding :8px;
+    width : 50% ;
+    background-color: transparent;
+    border : 4px solid ;
+    border-color :beige;
+    flex-direction : column
+}
+.list{
+    display : flex;
+    justify-content :space-between;
+    margin-top : 25px;
+    margin-bottom : 5px;
+    
+}
+
+
+.description { 
+    font-size : 1.3em;
+    font-family :'Times New Roman', Times, serif;
+    background-color: transparent;  
+    outline : none;
+    border : none;
+    color : beige;
+    flex-grow: 1;
+}
+
+.list:has(.checker:checked){
+    text-decoration: line-through;
+    background-color : grey;
+    order: 1;
+   
+}
