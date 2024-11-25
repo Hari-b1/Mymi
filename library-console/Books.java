@@ -1,20 +1,14 @@
 import java.util.Scanner;
 
 public class Books {
-    private String Book_id ;
-    private String Book_name ;
-    private String Authour_name ;
-    private boolean Rented_status;
-    private int Rented_count ;
-    private static Scanner in;
+    public String Book_id ;
+    public String Book_name ;
+    public String Authour_name ;
+    public boolean Rented_status;
+    public int Rented_count ;
+    
 
-    public static Scanner getReader(){
-        if(in == null){
-            in = new Scanner(System.in);
-            return in; 
-        }
-        return in;
-    }
+
     Books(String Book_id, String Book_name, String Authour_name){
         this.Book_id = Book_id;
         this.Book_name = Book_name;
@@ -24,14 +18,19 @@ public class Books {
     }
 
 
+    
+
+
 
     public static Books AddBook(){
+        App.getReader().nextLine();
         System.out.println("Enter the Book_id :");
-        String Book_id = getReader().nextLine();
+        String Book_id = App.getReader().nextLine();
+        System.out.println();
         System.out.println("Enter the Book_name :");
-        String Book_name = getReader().nextLine();
+        String Book_name = App.getReader().nextLine();
         System.out.println("Enter the Authour_name :");
-        String Authour_name = getReader().nextLine();
+        String Authour_name = App.getReader().nextLine();
 
         return new Books(Book_id, Book_name, Authour_name);
 

@@ -7,15 +7,9 @@ public class Customer {
     private String Customer_mail;
     private int Rented_book_count;
     private float Due_amount;
-    private static Scanner in;
+    
 
-    public static Scanner getReader(){
-        if(in == null){
-            in = new Scanner(System.in);
-            return in; 
-        }
-        return in;
-    }
+   
     Customer(String Customer_id, String Customer_name, String Customer_address, String Customer_mail, String Customer_contact){
         this.Customer_id = Customer_id;
         this.Customer_name = Customer_name;
@@ -26,17 +20,21 @@ public class Customer {
         this.Rented_book_count = 0;
     }
 
+    public  String getCustomerId(Customer customer){
+        return customer.Customer_id;
+    }
+
     public static Customer create_customer(){
         System.out.println("Enter the customer_id : ");
-        String Customer_id = getReader().nextLine();
+        String Customer_id = App.getReader().nextLine();
         System.out.println("Enter the customer_name : ");
-        String Customer_name = getReader().nextLine();
+        String Customer_name = App.getReader().nextLine();
         System.out.println("Enter the customer_address : ");
-        String Customer_address = getReader().nextLine();
+        String Customer_address = App.getReader().nextLine();
         System.out.println("Enter the customer_mail : ");
-        String Customer_mail = getReader().nextLine();
+        String Customer_mail = App.getReader().nextLine();
         System.out.println("Enter the customer_contact : ");
-        String Customer_contact = getReader().nextLine();
+        String Customer_contact = App.getReader().nextLine();
         return new Customer(Customer_id, Customer_name, Customer_address, Customer_mail, Customer_contact);  
     }
 }
