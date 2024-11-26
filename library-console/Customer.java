@@ -25,6 +25,7 @@ public class Customer {
     }
 
     public static Customer create_customer(){
+        App.getReader().nextLine();
         System.out.println("Enter the customer_id : ");
         String Customer_id = App.getReader().nextLine();
         System.out.println("Enter the customer_name : ");
