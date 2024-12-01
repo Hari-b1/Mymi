@@ -38,6 +38,7 @@ public class App{
     }
 
     public void CustomerValidity(){
+        App.getReader().nextLine();1
         System.out.println("Enter the customer id : ");
         String Customer = App.getReader().nextLine();
         if(CustomerList.containsKey(Customer)){

@@ -25,7 +25,7 @@ class Rental{
     }
 
     public static Rental createRental(String CustomerId){
-
+    App.getReader().nextLine();
        System.out.println("Enter the book id you want to borrow : ");
        String RentedBooks = App.getReader().nextLine();
        String Renter = CustomerId;
@@ -36,6 +36,7 @@ class Rental{
 
    public static float ReturnRequest(){
     float Due_amount = (float)0.0 ;
+    App.getReader().nextLine();
     System.out.println("Enter the Rental-id to return : ");
     String RentalId = App.getReader().nextLine();
     Rental rent = RentalList.get(RentalId);
