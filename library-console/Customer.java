@@ -20,8 +20,12 @@ public class Customer {
         this.Rented_book_count = 0;
     }
 
-    public  String getCustomerId(Customer customer){
-        return customer.Customer_id;
+    public  String getCustomerId(){
+        return this.Customer_id;
+    }
+
+    public String getCustomerName(){
+        return this.Customer_name;
     }
 
     public static Customer create_customer(){
@@ -37,5 +41,31 @@ public class Customer {
         System.out.println("Enter the customer_contact : ");
         String Customer_contact = App.getReader().nextLine();
         return new Customer(Customer_id, Customer_name, Customer_address, Customer_mail, Customer_contact);  
+    }
+
+    public void DuePayment(){
+        System.out.println("Your balance is NIL...");
+    }
+
+
+    public void CustomerOptions(){
+
+        System.out.println("Press 1 to borrow a book : ");
+        System.out.println("Press 2 to return a book :");
+        System.out.println("Press 3 to pay the due amount :");
+        System.out.println("Press 4 to quit : ");
+        int choice = App.getReader().nextInt();
+        switch(choice){
+            case 1 : Rental rental = Rental.createRental(this.Customer_id);
+            break;
+            
+            case 2 : this.Due_amount = this.Due_amount + Rental.ReturnRequest();
+            break;
+
+            case 3 : this.DuePayment();
+            break;
+
+            case 4 : break;
+        }
     }
 }
