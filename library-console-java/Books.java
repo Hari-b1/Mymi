@@ -35,4 +35,12 @@ public class Books {
         return new Books(Book_id, Book_name, Authour_name);
 
     }
+
+    public void MarkBook(){
+        this.Rented_status = false;
+    }
+
+    public void SetStatus(){
+        this.Rented_status = true;
+    }
 }

@@ -40,6 +40,7 @@ class Rental{
     System.out.println("Enter the Rental-id to return : ");
     String RentalId = App.getReader().nextLine();
     Rental rent = RentalList.get(RentalId);
+    
     String returnD = App.getReader().nextLine();
     LocalDate ReturnDate = LocalDate.parse(returnD);
     int returnResult = rent.DueDate.compareTo(ReturnDate);
