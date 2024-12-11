@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class Customer {
     private String Customer_id;
     private String Customer_name;
