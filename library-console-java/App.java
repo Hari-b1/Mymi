@@ -3,15 +3,25 @@ import java.util.*;
 public class App {
 
     private static Scanner in;
-    HashMap<String, Customer> CustomerList = new HashMap<>();
+    HashMap<String, Customer> CustomerList = new HashMap<>();//New hash map created
     HashMap<String, Books> BookList = new HashMap<>();
 
     public void customerList(Customer customer) {
-        CustomerList.put(customer.getCustomerId(), customer);
+        CustomerList.put(customer.getCustomerId(), customer);//Stored in the Customer objects
     }
 
     public void bookList(Books book) {
         BookList.put(book.Book_id, book);
+    }
+
+    public void CustomerDetails(){
+        for(String key : CustomerList.keySet()){
+            System.out.println("------------------------------------------------");
+            Customer obj = CustomerList.get(key);
+            System.out.println("Customer_id  :"  + obj.getCustomerId());
+            System.out.println("Customer_name :  " + obj.getCustomerName());
+
+        }
     }
 
     public static Scanner getReader() {

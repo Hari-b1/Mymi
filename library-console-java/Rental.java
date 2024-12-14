@@ -25,7 +25,7 @@ class Rental{
     }
 
     public static Rental createRental(String CustomerId){
-    App.getReader().nextLine();
+    App.getReader().nextLine();                                                  
        System.out.println("Enter the book id you want to borrow : ");
        String RentedBooks = App.getReader().nextLine();
        String Renter = CustomerId;
